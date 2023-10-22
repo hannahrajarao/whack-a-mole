@@ -1,0 +1,17 @@
+.parent {
+    display: flex;
+}
+
+.mole {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: green;
+    margin: 0px 10px;
+}
+
+.spacer {
+    height: 100px;
+    width: 50px;
+    margin: 0px 5px;
+}
