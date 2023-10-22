@@ -18,8 +18,7 @@ function startGame() {
 function startTimer() {
     timerInterval = setInterval(() => {
         if(timeRemaining <=0) {
-            clearInterval(timerInterval);
-            gameInProgress = false;
+            endGame();
         }
         else {
             timeRemaining--;
@@ -48,6 +47,12 @@ function chooseHole() {
     chosenHole = Math.floor(Math.random()*numberOfHoles);
     console.log(chosenHole);
     turnOnLight(chosenHole);
+}
+
+function endGame() {
+    clearInterval(timerInterval);
+    turnOffLight(chosenHole);
+    gameInProgress = false;
 }
 
 function turnOnLight(holeNum) {
