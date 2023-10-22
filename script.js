@@ -40,12 +40,10 @@ function selectHole(holeNumber) {
             updateScore();
         }
     }
-    
 }
 
 function chooseHole() {
     chosenHole = Math.floor(Math.random()*numberOfHoles);
-    console.log(chosenHole);
     turnOnLight(chosenHole);
 }
 
