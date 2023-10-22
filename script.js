@@ -2,10 +2,14 @@ const timeRemainingEl = document.getElementById("time-remaining");
 const scoreEl = document.getElementById("score");
 
 const numberOfHoles = 7;
+const totalTime = 60;
+
 var chosenHole;
-var timeRemaining = 60;
+var timeRemaining = totalTime;
 var score = 0;
 var gameInProgress = false;
+updateTimeRemaining();
+
 
 function startGame() {
     gameInProgress = true;
@@ -16,6 +20,8 @@ function startGame() {
 }
 
 function startTimer() {
+    timeRemaining = totalTime;
+    updateTimeRemaining();
     timerInterval = setInterval(() => {
         if(timeRemaining <=0) {
             endGame();
